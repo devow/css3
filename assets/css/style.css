@@ -1,10 +1,14 @@
+@import url(global.css);
 
 * {
     margin: 0;
     padding: 0;
+    color: black;
+    text-decoration: none;
 }
 
 body {
+    background-color: #F9F9F9;
     display: grid;
     grid: "header" 56px "content" auto / 218px 1fr;
 }
@@ -19,19 +23,72 @@ header {
 }
 
 main {
-    background-color: bisque;
     grid-area: 2 / 2 / span 1 / span 1;
     display: grid;
     grid: auto-flow 262px / repeat(4, 282px);
     justify-self: center;
     justify-items: center;
-    align-items: center;
+    gap: 16px;
+    padding: 26px 0 0 26px;
 }
 
 aside {
-    background-color: blueviolet;
+    background-color: #FFFFFF;
     grid-area: 2 / 1 / span 1 / span 1;
     display: grid;
     grid: auto-flow 24px / 218px;
+    gap: 16px;
+    padding: 26px 0 0 26px;
+    font-size: 14px;
+    font-weight: 400;
+}
 
+.a {
+    color: black;
+    text-decoration: none;
+}
+
+.button {
+    display: grid;
+    grid: auto / 1fr 4fr;
+    align-items: center;
+}
+
+.button img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.video-suggestion {
+    width: 250px;
+    align-self: flex-start;
+    display: grid;
+    grid: auto / autof-flow auto auto;
+}
+
+.suggestion-thumbnail {
+    height: 140.29px;
+}
+
+.suggestion-properties {
+    display: grid;
+    grid: 42px 1fr / 42px 1fr;
+    column-gap: 16px;
+    margin-top: 8px;
+}
+
+.suggestion-avatar {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.suggestion-title {
+    grid-area: 1 / 2 / span 1 / span 1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.suggestion-statistics {
+    grid-area: 2 / 2 / span 1 / span 1;
+    font-size: 12px;
+    font-weight: 400;
 }
