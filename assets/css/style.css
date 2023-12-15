@@ -1,0 +1,37 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid: "header" 56px "content" auto / 218px 1fr;
+}
+
+header {
+    background-color: tomato;
+    grid-area: 1 / 1 / 2 / 3;
+    display: grid;
+    grid: auto / auto-flow 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+main {
+    background-color: bisque;
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: grid;
+    grid: auto-flow 262px / repeat(4, 282px);
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+aside {
+    background-color: blueviolet;
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: grid;
+    grid: auto-flow 24px / 218px;
+
+}
